@@ -1,7 +1,10 @@
-{{#link-to 'friends.index'}}See all friends{{/link-to}}
+{{link-to 'See all friends' 'friends.index'}}
 
 <ul>
   <li>Full Name: {{model.fullName}}</li>
   <li>Email: {{model.email}}</li>
   <li>Twitter: {{model.twitter}}</li>
 </ul>
+
+{{link-to "Edit" "friends.edit" model}}
+<a href="#" {{action 'delete' model}}>Delete</a>
